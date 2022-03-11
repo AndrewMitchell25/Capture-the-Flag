@@ -307,16 +307,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2091100587066597640, guid: 680e7d4ae388f4e379e013d4ea718a41,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2990228158388011375}
-    - target: {fileID: 2091100587066597640, guid: 680e7d4ae388f4e379e013d4ea718a41,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenOptions
-      objectReference: {fileID: 0}
     - target: {fileID: 2934782114655473908, guid: 680e7d4ae388f4e379e013d4ea718a41,
         type: 3}
       propertyPath: m_Name
@@ -326,6 +316,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091100587066597640, guid: 680e7d4ae388f4e379e013d4ea718a41,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2990228158388011375}
+    - target: {fileID: 2091100587066597640, guid: 680e7d4ae388f4e379e013d4ea718a41,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenOptions
       objectReference: {fileID: 0}
     - target: {fileID: 2934782114655473904, guid: 680e7d4ae388f4e379e013d4ea718a41,
         type: 3}

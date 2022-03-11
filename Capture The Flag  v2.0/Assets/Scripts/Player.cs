@@ -43,26 +43,18 @@ public class Player : MonoBehaviour
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal " + playerNum), Input.GetAxisRaw("Vertical " + playerNum));
         moveVelocity = moveInput.normalized * speed;
 
-        if (team == 1 && transform.position.x <= -0.5f && pickedUp == true)
+        if (team == 1 && transform.position.x <= -0.5f && pickedUp == true && captured == false)
         {
             Instantiate(effect, transform.position, Quaternion.identity);
 
-            captured = true;
-            redScore += 1;
-            lastScorerRed = true;
-
-            Captured();
+            StartCoroutine(CapturedPause(.3f, true));
         }
 
-        if (team == 2 && transform.position.x >= 0.5f && pickedUp == true)
+        if (team == 2 && transform.position.x >= 0.5f && pickedUp == true && captured == false)
         {
             Instantiate(effect, transform.position, Quaternion.identity);
 
-            captured = true;
-            blueScore += 1;
-            lastScorerRed = false;
-
-            Captured();
+            StartCoroutine(CapturedPause(.3f, false));
         }
     }
 
@@ -141,7 +133,7 @@ public class Player : MonoBehaviour
     IEnumerator PauseControls(float time)
     {
         movement = false;
-        yield return new WaitForSecondsRealtime(time);
+        yield return new WaitForSeconds(time);
         
         movement = true;
     }
@@ -150,7 +142,7 @@ public class Player : MonoBehaviour
     {
         movement = false;
         collider1.enabled = false;
-        yield return new WaitForSecondsRealtime(time);
+        yield return new WaitForSeconds(time);
         if (movement == false)
         {
             FindObjectOfType<AudioManager>().Play("OutOfJail");
@@ -161,6 +153,26 @@ public class Player : MonoBehaviour
             collider1.enabled = true;
         }
     }
-    
+
+    IEnumerator CapturedPause(float time, bool red)
+    {
+        captured = true;
+        movement = false;
+        yield return new WaitForSeconds(time);
+
+        if (red == true)
+        {
+            redScore += 1;
+            lastScorerRed = true;
+        }
+        else
+        {
+            blueScore += 1;
+            lastScorerRed = false;
+        }
+
+        Captured();
+    }
+
 }
 

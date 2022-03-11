@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9127273545106164541}
   - component: {fileID: 9127273545106164530}
   m_Layer: 0
-  m_Name: Blue
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9127273545106164531}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.8074259, y: 0.025780693, z: -2.8656342}
+  m_LocalPosition: {x: 0.8074259, y: 0.025780693, z: 5.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -221,8 +221,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0, g: 0.4431373, b: 1, a: 1}
-      maxColor: {r: 0.09411766, g: 0.27450982, b: 0.5882353, a: 1}
+      minColor: {r: 1, g: 0, b: 0, a: 1}
+      maxColor: {r: 0.6117647, g: 0.10980393, b: 0.09411766, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1538,7 +1538,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 9b00e46d4813e4a188dd5ce37aa5b935, type: 3}
+    - sprite: {fileID: 21300000, guid: f5dce546b99874b29819d330bced7152, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
